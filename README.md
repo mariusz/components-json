@@ -208,7 +208,26 @@ const { files, output } = generatePackage(
 
 ## Property Mappings
 
+### Spacing Properties
+
+All standard CSS spacing properties are supported using camelCase:
+
+| JSON Property | CSS Property |
+|---------------|--------------|
+| `padding` | `padding` |
+| `paddingTop` | `padding-top` |
+| `paddingRight` | `padding-right` |
+| `paddingBottom` | `padding-bottom` |
+| `paddingLeft` | `padding-left` |
+| `margin` | `margin` |
+| `marginTop` | `margin-top` |
+| `marginRight` | `margin-right` |
+| `marginBottom` | `margin-bottom` |
+| `marginLeft` | `margin-left` |
+
 ### Axis Properties
+
+Axis properties expand to both sides for convenience:
 
 | JSON Property | CSS Output |
 |---------------|------------|

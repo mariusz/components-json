@@ -5,7 +5,7 @@
 
 import {
   StyleBlock,
-  CSS_LOGICAL_PROPS,
+  CSS_AXIS_PROPS,
   FlatStyleValue,
   CssGeneratorOptions,
 } from './types.js';
@@ -34,8 +34,8 @@ function flattenStyles(
     const cssKey = prefix ? `${prefix}-${toKebab(key)}` : toKebab(key);
 
     // Check for axis properties (paddingX, marginY, etc.)
-    if (key in CSS_LOGICAL_PROPS) {
-      const [startProp, endProp] = CSS_LOGICAL_PROPS[key];
+    if (key in CSS_AXIS_PROPS) {
+      const [startProp, endProp] = CSS_AXIS_PROPS[key];
       const resolved = resolver.resolve(value as FlatStyleValue);
       result[startProp] = resolved;
       result[endProp] = resolved;

@@ -56,8 +56,8 @@ export type StateDefinition = StyleBlock;
 /** Component variant definition (sm, lg, primary, secondary, etc.) */
 export type VariantDefinition = StyleBlock;
 
-/** CSS axis property mappings */
-export const CSS_LOGICAL_PROPS: Record<string, [string, string]> = {
+/** CSS axis property mappings (expand to left/right or top/bottom) */
+export const CSS_AXIS_PROPS: Record<string, [string, string]> = {
   paddingX: ['padding-left', 'padding-right'],
   paddingY: ['padding-top', 'padding-bottom'],
   marginX: ['margin-left', 'margin-right'],
