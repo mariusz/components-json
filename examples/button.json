@@ -55,7 +55,7 @@
     "variants": {
       "sm": {
         "paddingX": "{spacing.sm}",
-        "paddingY": "{spacing.md}",
+        "paddingY": "{spacing.xs}",
         "font": {
           "size": "{typography.size.sm}"
         }
@@ -65,6 +65,44 @@
         "paddingY": "{spacing.md}",
         "font": {
           "size": "{typography.size.lg}"
+        }
+      },
+      "primary": {
+        "background": "{color.button.primary.background.default}",
+        "color": "{color.button.primary.color.default}",
+        "states": {
+          "hover": {
+            "background": "{color.button.primary.background.hover}"
+          },
+          "active": {
+            "background": "{color.button.primary.background.active}"
+          }
+        }
+      },
+      "secondary": {
+        "background": "{color.button.secondary.background.default}",
+        "color": "{color.button.secondary.color.default}",
+        "states": {
+          "hover": {
+            "background": "{color.button.secondary.background.hover}"
+          },
+          "active": {
+            "background": "{color.button.secondary.background.active}"
+          }
+        }
+      },
+      "ghost": {
+        "background": "{color.button.ghost.background.default}",
+        "color": "{color.button.ghost.color.default}",
+        "border": "1px solid transparent",
+        "states": {
+          "hover": {
+            "background": "{color.button.ghost.background.hover}",
+            "color": "{color.button.ghost.color.hover}"
+          },
+          "active": {
+            "background": "{color.button.ghost.background.active}"
+          }
         }
       }
     }

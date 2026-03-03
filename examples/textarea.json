@@ -1,0 +1,77 @@
+{
+  "$schema": "components-json/1.0",
+  "$import": [
+    "./tokens.json"
+  ],
+
+  "textarea": {
+    "$type": "component",
+    "$description": "Multi-line text input",
+    "$allowedElements": [
+      "textarea"
+    ],
+
+    "base": {
+      "display": "block",
+      "width": "100%",
+      "minHeight": "80px",
+      "padding": "{spacing.md}",
+      "border": "1px solid {color.input.border.default}",
+      "borderRadius": "{radius.md}",
+      "font": {
+        "family": "{typography.font.default}",
+        "size": "{typography.size.md}",
+        "lineHeight": "{typography.lineHeight.normal}"
+      },
+      "background": "{color.input.background.default}",
+      "color": "{color.input.text.default}",
+      "outline": "none",
+      "resize": "vertical",
+      "transition": "border-color 0.15s ease",
+      "::placeholder": {
+        "color": "{color.input.text.placeholder}"
+      }
+    },
+
+    "states": {
+      "hover": {
+        "borderColor": "{color.input.border.hover}"
+      },
+      "focus": {
+        "borderColor": "{color.input.border.focus}",
+        "boxShadow": "0 0 0 3px rgba(59, 130, 246, 0.1)"
+      },
+      "disabled": {
+        "background": "{color.input.background.disabled}",
+        "borderColor": "{color.input.border.disabled}",
+        "color": "{color.input.text.disabled}",
+        "cursor": "not-allowed",
+        "resize": "none"
+      }
+    },
+
+    "variants": {
+      "sm": {
+        "padding": "{spacing.sm}",
+        "font": {
+          "size": "{typography.size.sm}"
+        }
+      },
+      "lg": {
+        "padding": "{spacing.lg}",
+        "font": {
+          "size": "{typography.size.lg}"
+        }
+      },
+      "error": {
+        "borderColor": "{color.input.border.error}",
+        "states": {
+          "focus": {
+            "borderColor": "{color.input.border.error}",
+            "boxShadow": "0 0 0 3px rgba(239, 68, 68, 0.1)"
+          }
+        }
+      }
+    }
+  }
+}

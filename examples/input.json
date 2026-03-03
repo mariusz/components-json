@@ -1,0 +1,89 @@
+{
+  "$schema": "components-json/1.0",
+  "$import": [
+    "./tokens.json"
+  ],
+
+  "input": {
+    "$type": "component",
+    "$description": "Text input field",
+    "$allowedElements": [
+      "input"
+    ],
+
+    "slots": {
+      "leadingIcon": {
+        "$allowedTypes": ["image", "{components.icon}"],
+        "$optional": true
+      },
+      "trailingIcon": {
+        "$allowedTypes": ["image", "{components.icon}"],
+        "$optional": true
+      }
+    },
+
+    "base": {
+      "display": "inline-flex",
+      "alignItems": "center",
+      "gap": "{spacing.sm}",
+      "width": "100%",
+      "paddingX": "{spacing.md}",
+      "paddingY": "{spacing.sm}",
+      "border": "1px solid {color.input.border.default}",
+      "borderRadius": "{radius.md}",
+      "font": {
+        "family": "{typography.font.default}",
+        "size": "{typography.size.md}"
+      },
+      "background": "{color.input.background.default}",
+      "color": "{color.input.text.default}",
+      "outline": "none",
+      "transition": "border-color 0.15s ease",
+      "::placeholder": {
+        "color": "{color.input.text.placeholder}"
+      }
+    },
+
+    "states": {
+      "hover": {
+        "borderColor": "{color.input.border.hover}"
+      },
+      "focus": {
+        "borderColor": "{color.input.border.focus}",
+        "boxShadow": "0 0 0 3px rgba(59, 130, 246, 0.1)"
+      },
+      "disabled": {
+        "background": "{color.input.background.disabled}",
+        "borderColor": "{color.input.border.disabled}",
+        "color": "{color.input.text.disabled}",
+        "cursor": "not-allowed"
+      }
+    },
+
+    "variants": {
+      "sm": {
+        "paddingX": "{spacing.sm}",
+        "paddingY": "{spacing.xs}",
+        "font": {
+          "size": "{typography.size.sm}"
+        }
+      },
+      "lg": {
+        "paddingX": "{spacing.lg}",
+        "paddingY": "{spacing.md}",
+        "font": {
+          "size": "{typography.size.lg}"
+        }
+      },
+      "error": {
+        "borderColor": "{color.input.border.error}",
+        "states": {
+          "focus": {
+            "borderColor": "{color.input.border.error}",
+            "boxShadow": "0 0 0 3px rgba(239, 68, 68, 0.1)"
+          }
+        }
+      }
+    }
+  }
+}
