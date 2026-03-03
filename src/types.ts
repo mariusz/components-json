@@ -56,12 +56,12 @@ export type StateDefinition = StyleBlock;
 /** Component variant definition (sm, lg, primary, secondary, etc.) */
 export type VariantDefinition = StyleBlock;
 
-/** CSS logical property mappings */
+/** CSS axis property mappings */
 export const CSS_LOGICAL_PROPS: Record<string, [string, string]> = {
-  paddingX: ['padding-inline', 'padding-inline'],
-  paddingY: ['padding-block', 'padding-block'],
-  marginX: ['margin-inline', 'margin-inline'],
-  marginY: ['margin-block', 'margin-block'],
+  paddingX: ['padding-left', 'padding-right'],
+  paddingY: ['padding-top', 'padding-bottom'],
+  marginX: ['margin-left', 'margin-right'],
+  marginY: ['margin-top', 'margin-bottom'],
 };
 
 /** CSS property mappings for nested objects */

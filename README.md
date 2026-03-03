@@ -208,14 +208,14 @@ const { files, output } = generatePackage(
 
 ## Property Mappings
 
-### Logical Properties
+### Axis Properties
 
 | JSON Property | CSS Output |
 |---------------|------------|
-| `paddingX` | `padding-inline` |
-| `paddingY` | `padding-block` |
-| `marginX` | `margin-inline` |
-| `marginY` | `margin-block` |
+| `paddingX` | `padding-left`, `padding-right` |
+| `paddingY` | `padding-top`, `padding-bottom` |
+| `marginX` | `margin-left`, `margin-right` |
+| `marginY` | `margin-top`, `margin-bottom` |
 
 ### Nested Properties
 

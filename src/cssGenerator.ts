@@ -33,7 +33,7 @@ function flattenStyles(
 
     const cssKey = prefix ? `${prefix}-${toKebab(key)}` : toKebab(key);
 
-    // Check for logical properties (paddingX, marginY, etc.)
+    // Check for axis properties (paddingX, marginY, etc.)
     if (key in CSS_LOGICAL_PROPS) {
       const [startProp, endProp] = CSS_LOGICAL_PROPS[key];
       const resolved = resolver.resolve(value as FlatStyleValue);
