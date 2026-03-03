@@ -1,0 +1,72 @@
+{
+  "$schema": "components-json/1.0",
+  "$import": [
+    "./tokens.json"
+  ],
+
+  "button": {
+    "$type": "component",
+    "$description": "Base action button",
+    "$allowedElements": [ 
+      "button",
+      "input"
+    ],
+
+    "slots": {
+      "iconLeft": {
+        "$allowedTypes": ["image", "{components.icon}"],
+        "$optional": true
+      },
+      "label": {
+        "$allowedTypes": ["text"],
+        "$optional": false
+      },
+      "iconRight": {
+        "$allowedTypes": ["image", "{components.icon}"],
+        "$optional": true
+      }
+    },
+
+    "base": {
+      "display": "inline-flex",
+      "alignItems": "center",
+      "gap": "{spacing.sm}",
+      "paddingX": "{spacing.md}",
+      "paddingY": "{spacing.sm}",
+      "borderRadius": "{radius.sm}",
+      "font": {
+        "family": "{typography.font.default}",
+        "size": "{typography.size.md}",
+        "weight": "{typography.weight.semibold}"
+      },
+      "background": "{color.button.default.background.default}",
+      "color": "{color.button.default.color.default}"
+    },
+
+    "states": {
+      "hover": {
+        "background": "{color.button.default.background.hover}"
+      },
+      "active": {
+        "background": "{color.button.default.background.active}"
+      }
+    },
+
+    "variants": {
+      "sm": {
+        "paddingX": "{spacing.sm}",
+        "paddingY": "{spacing.md}",
+        "font": {
+          "size": "{typography.size.sm}"
+        }
+      },
+      "lg": {
+        "paddingX": "{spacing.lg}",
+        "paddingY": "{spacing.md}",
+        "font": {
+          "size": "{typography.size.lg}"
+        }
+      }
+    }
+  }
+}

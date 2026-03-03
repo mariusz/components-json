@@ -1,0 +1,50 @@
+{
+  "name": "components-json",
+  "version": "0.1.0",
+  "description": "JSON component notation parser - generate CSS, HTML, and Web Components from JSON definitions",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "components-json": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./parser": {
+      "import": "./dist/parser.js",
+      "types": "./dist/parser.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "example": "node dist/cli.js build examples/button.json --out examples/output",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "design-system",
+    "components",
+    "css",
+    "web-components",
+    "tokens",
+    "json"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
